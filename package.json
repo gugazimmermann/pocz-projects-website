@@ -4,7 +4,7 @@
   "private": true,
   "main": "./build/index.js",
   "scripts": {
-    "start": "craco start",
+    "start": "PORT=4200 craco start",
     "build": "craco build",
     "test": "craco test --colors --coverage --watchAll=false --no-cache",
     "eject": "react-scripts eject",
