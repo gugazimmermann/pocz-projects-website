@@ -16,7 +16,7 @@ jobs:
       - name: Create env file
         run: |
           touch .env
-          echo REACT_APP_PROJECT_NAME=${{ secrets.${{ secrets.REACT_APP_PROJECT_NAME }} }} >> .env
+          echo REACT_APP_PROJECT_NAME=${{ secrets.REACT_APP_PROJECT_NAME }} >> .env
           echo REACT_APP_PROJECT_WEBSITE_NAME=${{ secrets.REACT_APP_PROJECT_WEBSITE_NAME }} >> .env
           echo REACT_APP_PROJECT_APP_URL=${{ secrets.REACT_APP_PROJECT_APP_URL }} >> .env
           echo REACT_APP_PROJECT_API_URL=${{ secrets.REACT_APP_PROJECT_API_URL }} >> .env
