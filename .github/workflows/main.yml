@@ -13,6 +13,14 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: "14"
+      - name: Create env file
+        run: |
+          touch .env
+          echo REACT_APP_PROJECT_NAME=${{ secrets.${{ secrets.REACT_APP_PROJECT_NAME }} }} >> .env
+          echo REACT_APP_PROJECT_WEBSITE_NAME=${{ secrets.REACT_APP_PROJECT_WEBSITE_NAME }} >> .env
+          echo REACT_APP_PROJECT_APP_URL=${{ secrets.REACT_APP_PROJECT_APP_URL }} >> .env
+          echo REACT_APP_PROJECT_API_URL=${{ secrets.REACT_APP_PROJECT_API_URL }} >> .env
+          cat .env
       - run: yarn install
       - run: yarn test
       - run: yarn build
