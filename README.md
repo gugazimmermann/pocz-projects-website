@@ -2,11 +2,11 @@
 
 [![Production Build](https://github.com/gugazimmermann/pocz-projects-website/actions/workflows/main.yml/badge.svg)](https://github.com/gugazimmermann/pocz-projects-website/actions/workflows/main.yml)
 
-<https://www.iustitia.io>
+<https://project-site.pocz.io>
 
 ## Tech
 
-Created using React / TypeScript / Tailwind / Sequelize / PostgreSQL
+Created using React / TypeScript / Tailwind / Sequelize / PostgreSQL / Github Actions
 
 ## Description
 
