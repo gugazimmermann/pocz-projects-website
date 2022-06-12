@@ -31,7 +31,7 @@ describe('Action', () => {
     const btn = screen.getByText('Cadastrar');
     await waitFor(() => fireEvent.click(btn));
     await waitFor(() => expect(window.location.assign).toHaveBeenCalledWith(
-      `${appSite}/cadastrar`,
+      `${appSite}/registar`,
     ));
     window.location = originalLocation;
   });

@@ -24,15 +24,15 @@ export function Nav(): ReactElement {
   return (
     <nav
       id="header"
-      className={`w-full z-10 top-0 text-white sticky ${
-        scrollPosition > 50 && 'menu'
+      className={`w-full z-50 top-0 sticky ${
+        scrollPosition > 50 ? 'bg-primary-600 text-white' : 'text-black'
       }`}
     >
       <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-2">
         <Link to="/">
           <div className="pl-4 flex justify-center content-center items-center flex-row">
             <img src="./logo64.png" width={40} height={40} alt="logo" />
-            <span className="ml-4 text-black no-underline hover:no-underline font-bold text-2xl lg:text-4xl">
+            <span className="ml-4 no-underline hover:no-underline font-bold text-2xl lg:text-4xl">
               {process.env.REACT_APP_PROJECT_NAME}
             </span>
           </div>
@@ -42,7 +42,7 @@ export function Nav(): ReactElement {
           <button
             type="button"
             id="nav-toggle"
-            className="gradient2 flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-green-500 appearance-none focus:outline-none"
+            className="gradient2 flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 appearance-none focus:outline-none"
             onClick={() => SetMenu(!menu)}
           >
             <svg
@@ -57,7 +57,7 @@ export function Nav(): ReactElement {
         </div>
 
         <div
-          className={`w-full grow lg:flex lg:items-center lg:w-auto mt-2 lg:mt-0 text-black p-4 lg:p-0 z-10 ${
+          className={`w-full grow lg:flex lg:items-center lg:w-auto mt-2 lg:mt-0 p-4 lg:p-0 z-10 ${
             !menu && 'hidden'
           }`}
           id="nav-content"
@@ -88,7 +88,8 @@ export function Nav(): ReactElement {
           <button
             type="button"
             id="navAction"
-            className="gradient2 mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded mt-4 lg:mt-0 py-4 px-8 shadow opacity-75"
+            className={`gradient2 mx-auto lg:mx-0 hover:underlinefont-extrabold rounded mt-4 lg:mt-0 py-4 px-8 shadow text-black ${
+              scrollPosition > 50 ? 'bg-primary-600 text-white' : ' opacity-75'}`}
             onClick={() => window.location.assign(appSite || '')}
           >
             Entrar

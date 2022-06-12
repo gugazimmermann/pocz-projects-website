@@ -18,19 +18,19 @@ export function ProductDetails(): ReactElement {
           title="Agenda"
           subTitle="Lorem ipsum dolor sit amet."
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula"
-          link={`${appSite}/cadastrar`}
+          link={`${appSite}/registar`}
         />
         <ProductDetailsItem
           title="Calendário"
           subTitle="Lorem ipsum dolor sit amet."
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula"
-          link={`${appSite}/cadastrar`}
+          link={`${appSite}/registar`}
         />
         <ProductDetailsItem
           title="Processos"
           subTitle="Lorem ipsum dolor sit amet."
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula"
-          link={`${appSite}/cadastrar`}
+          link={`${appSite}/registar`}
         />
       </div>
     </section>

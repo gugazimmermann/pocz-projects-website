@@ -30,7 +30,7 @@ describe('Hero', () => {
     render(<Hero />);
     const btn = screen.getByText('Cadastrar');
     await waitFor(() => fireEvent.click(btn));
-    await waitFor(() => expect(window.location.assign).toHaveBeenCalledWith(`${appSite}/cadastrar`));
+    await waitFor(() => expect(window.location.assign).toHaveBeenCalledWith(`${appSite}/registar`));
     window.location = originalLocation;
   });
 });

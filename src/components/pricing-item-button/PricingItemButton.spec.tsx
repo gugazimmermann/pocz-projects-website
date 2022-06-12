@@ -7,12 +7,12 @@ import PricingItemButton from './PricingItemButton';
 
 describe('PricingItemButton', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<PricingItemButton link="AAA" />);
+    const { baseElement } = render(<PricingItemButton link="AAA" active />);
     expect(baseElement).toBeTruthy();
   });
 
   it('should have Cadastrar text', () => {
-    const { getAllByText } = render(<PricingItemButton link="AAA" />);
+    const { getAllByText } = render(<PricingItemButton link="AAA" active />);
     expect(getAllByText('Cadastrar')).toBeTruthy();
   });
 
@@ -27,7 +27,7 @@ describe('PricingItemButton', () => {
       reload: jest.fn(),
       replace: jest.fn(),
     });
-    render(<PricingItemButton link="AAA" />);
+    render(<PricingItemButton link="AAA" active />);
     const btn = screen.getByText('Cadastrar');
     await waitFor(() => fireEvent.click(btn));
     await waitFor(() => expect(window.location.assign).toHaveBeenCalledWith('AAA'));

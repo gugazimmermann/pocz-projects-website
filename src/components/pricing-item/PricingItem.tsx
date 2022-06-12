@@ -40,13 +40,13 @@ export function PricingItem({
             {' '}
             <span className="text-base">{priceText}</span>
           </div>
-          <PricingItemButton link={link} />
+          <PricingItemButton link={link} active={false} />
         </div>
       </div>
     );
   }
   return (
-    <div className="flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg bg-white mt-4 sm:-mt-6 gradient shadow hover:shadow-lg z-10">
+    <div className="flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg mt-4 sm:-mt-6 gradient shadow hover:shadow-lg z-10 text-white">
       <div className="flex-1 rounded-t rounded-b-none overflow-hidden">
         <div className="w-full p-8 text-3xl font-bold text-center">
           {title}
@@ -67,7 +67,7 @@ export function PricingItem({
           <span className="text-base">{priceText}</span>
         </div>
       </div>
-      <PricingItemButton link={link} />
+      <PricingItemButton link={link} active />
     </div>
   );
 }

@@ -12,8 +12,8 @@ export function NavItem({ link, text, active }: NavItemProps): ReactElement {
     <Link to={link}>
       <span
         className={
-          `inline-block text-black no-underline py-2 px-4 ${
-            active ? 'font-bold' : 'hover:text-gray-800 hover:text-underline'}`
+          `inline-block no-underline py-2 px-4 ${
+            active ? 'font-bold' : 'hover:text-underline'}`
         }
       >
         {text}

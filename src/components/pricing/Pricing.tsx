@@ -20,7 +20,7 @@ export function Pricing(): ReactElement {
             functionalities={['Thing', 'Thing', 'Thing']}
             price={0}
             priceText="teste por 7 dias"
-            link={`${appSite}/cadastrar/gratuito`}
+            link={`${appSite}/registar/gratuito`}
             active={false}
           />
           <PricingItem
@@ -28,7 +28,7 @@ export function Pricing(): ReactElement {
             functionalities={['Thing', 'Thing', 'Thing']}
             price={25}
             priceText="/ por usuário"
-            link={`${appSite}/cadastrar/basico`}
+            link={`${appSite}/registar/basico`}
             active
           />
           <PricingItem
@@ -36,7 +36,7 @@ export function Pricing(): ReactElement {
             functionalities={['Thing', 'Thing', 'Thing']}
             price={99}
             priceText="usuários ilimitados"
-            link={`${appSite}/cadastrar/profissional`}
+            link={`${appSite}/registar/profissional`}
             active={false}
           />
         </div>

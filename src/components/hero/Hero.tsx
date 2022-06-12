@@ -18,7 +18,7 @@ export function Hero(): ReactElement {
           <button
             type="button"
             className="gradient2 mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded my-2 md:my-6 py-4 px-8 shadow-lg w-48"
-            onClick={() => window.location.assign(`${appSite}/cadastrar`)}
+            onClick={() => window.location.assign(`${appSite}/registar`)}
           >
             Cadastrar
           </button>
