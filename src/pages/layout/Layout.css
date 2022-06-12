@@ -1,12 +1,13 @@
 .gradient {
-  background-image: linear-gradient(250deg, #6366F1 0%, #A5B4FC 74%);
+  background-color: #0284c7;
+  background-image: linear-gradient(315deg, #0284c7 0%, #7dd3fc 74%);
 }
 
 .menu {
-  background-color: #6366F1;
+  background-color: #0284c7;
 }
 
 .gradient2 {
-  background-color: #D97706;
-  background-image: linear-gradient(315deg, #D97706 0%, #FCD34D 74%);
+  background-color: #f59e0b;
+  background-image: linear-gradient(315deg, #f59e0b 0%, #fde68a 74%);
 }

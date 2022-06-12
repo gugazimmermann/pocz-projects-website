@@ -24,18 +24,19 @@ export function Nav(): ReactElement {
   return (
     <nav
       id="header"
-      className={
-        `w-full z-10 top-0 text-white sticky ${scrollPosition > 50 && 'menu'}`
-      }
+      className={`w-full z-10 top-0 text-white sticky ${
+        scrollPosition > 50 && 'menu'
+      }`}
     >
       <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-2">
-        <div className="pl-4 flex items-center">
-          <Link to="/">
-            <span className="text-black no-underline hover:no-underline font-bold text-2xl lg:text-4xl">
+        <Link to="/">
+          <div className="pl-4 flex justify-center content-center items-center flex-row">
+            <img src="./logo64.png" width={40} height={40} alt="logo" />
+            <span className="ml-4 text-black no-underline hover:no-underline font-bold text-2xl lg:text-4xl">
               {process.env.REACT_APP_PROJECT_NAME}
             </span>
-          </Link>
-        </div>
+          </div>
+        </Link>
 
         <div className="block lg:hidden pr-4">
           <button
@@ -56,10 +57,9 @@ export function Nav(): ReactElement {
         </div>
 
         <div
-          className={
-            `w-full flex-grow lg:flex lg:items-center lg:w-auto mt-2 lg:mt-0 text-black p-4 lg:p-0 z-10 ${
-              !menu && 'hidden'}`
-          }
+          className={`w-full grow lg:flex lg:items-center lg:w-auto mt-2 lg:mt-0 text-black p-4 lg:p-0 z-10 ${
+            !menu && 'hidden'
+          }`}
           id="nav-content"
         >
           <ul className="list-reset lg:flex justify-end flex-1 items-center">
