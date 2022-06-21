@@ -1,5 +1,6 @@
 import LANG from '../../src/lang/pt-BR';
 import clientList from '../../src/components/customers/customer-list';
+import productList from '../../src/components/product-main/product-list';
 
 describe('e2e Tests', () => {
   const env = Cypress.env();
@@ -24,6 +25,15 @@ describe('e2e Tests', () => {
     cy.get("h2").contains(LANG.CUSTOMERS.title).should("exist");
     clientList.forEach(({name}) => {
       cy.get("span").contains(name).children('svg').should("exist");
+    })
+  });
+
+  it('Products', () => {
+    cy.get("h2").contains(LANG.PRODUCTS.title).should("exist");
+    productList.forEach(({name, description, link}) => {
+      cy.get("h3").contains(name).should("exist");
+      cy.get("p").contains(description).should("exist");
+      cy.get("a").contains(link).should('have.attr', 'href').and('include', link)
     })
   });
 });

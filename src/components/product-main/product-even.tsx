@@ -17,7 +17,7 @@ const ProductEven = (
         <p className="text-gray-600 mb-8">
           {description}
           <br />
-          <a className="text-orange-500 underline" href="https://undraw.co/">
+          <a className="text-orange-500 underline" href={`https://${link}`}>
             {link}
           </a>
         </p>
