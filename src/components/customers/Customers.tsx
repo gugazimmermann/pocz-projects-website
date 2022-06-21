@@ -4,7 +4,7 @@ import clientList from './clientList';
 
 export function Customers(): ReactElement {
   const clients = (name: string, image: ReactElement): ReactElement => (
-    <span className="w-1/2 p-4 md:w-auto flex items-center">
+    <span key={name.split(' ').join('')} className="w-1/2 p-4 md:w-auto flex items-center">
       {image}
       {name}
     </span>
