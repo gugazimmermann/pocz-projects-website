@@ -1,10 +1,10 @@
 import { ReactElement } from 'react';
 import LANG from '../../lang/pt-BR';
-import clientList from './clientList';
+import clientList from './customer-list';
 
 export function Customers(): ReactElement {
-  const clients = (name: string, image: ReactElement): ReactElement => (
-    <span key={name.split(' ').join('')} className="w-1/2 p-4 md:w-auto flex items-center">
+  const clients = (name: string, image: ReactElement, index: number): ReactElement => (
+    <span key={index} className="w-1/2 p-4 md:w-auto flex items-center">
       {image}
       {name}
     </span>
@@ -21,7 +21,7 @@ export function Customers(): ReactElement {
         </div>
 
         <div className="flex flex-1 flex-wrap max-w-4xl mx-auto items-center justify-between text-xl text-gray-500 font-bold">
-          {clientList.map(({ name, image }) => clients(name, image))}
+          {clientList.map(({ name, image }, index) => clients(name, image, index))}
         </div>
       </div>
     </section>

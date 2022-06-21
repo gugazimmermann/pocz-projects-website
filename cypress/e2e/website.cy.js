@@ -1,5 +1,5 @@
 import LANG from '../../src/lang/pt-BR';
-import clientList from '../../src/components/customers/clientList';
+import clientList from '../../src/components/customers/customer-list';
 
 describe('e2e Tests', () => {
   const env = Cypress.env();

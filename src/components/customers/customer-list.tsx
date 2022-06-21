@@ -1,8 +1,8 @@
 import { ReactElement } from 'react';
 
-import BadgeLifeIo from './images/ badgeLifeIo';
-import Bugz4Life from './images/ bugz4Life';
-import MicCheck from './images/ micCheck';
+import BadgeLifeIo from './images/badgeLifeIo';
+import Bugz4Life from './images/bugz4Life';
+import MicCheck from './images/micCheck';
 import TeeShirtz from './images/teeShirtz';
 
 const clientList: { name: string, image: ReactElement }[] = [
