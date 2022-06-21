@@ -1,4 +1,5 @@
 import { ReactElement } from 'react';
+import LANG from '../../lang/pt-BR';
 import styles from './Hero.module.css';
 
 export function Hero(): ReactElement {
@@ -9,10 +10,10 @@ export function Hero(): ReactElement {
       <div className="container mx-auto">
         <div className="text-center px-3 lg:px-0">
           <h1 className="my-4 text-2xl md:text-3xl lg:text-5xl font-black leading-tight">
-            Mensagem para vender o Produto!
+            {LANG.HERO.title}
           </h1>
           <p className="leading-normal text-gray-800 text-base md:text-xl lg:text-2xl mb-8">
-            Um paragrafo maior para deixar o visitante com vontade de assinar!
+            {LANG.HERO.subtitle}
           </p>
 
           <button
@@ -20,7 +21,7 @@ export function Hero(): ReactElement {
             className="gradient2 mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded my-2 md:my-6 py-4 px-8 shadow-lg w-48"
             onClick={() => window.location.assign(`${appSite}/registar`)}
           >
-            Cadastrar
+            {LANG.HERO.button}
           </button>
         </div>
 
