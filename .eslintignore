@@ -3,6 +3,8 @@
 
 # testing
 /coverage
+/cypress
+cypress.config.ts
 
 # production
 /build

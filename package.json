@@ -9,7 +9,9 @@
     "test": "craco test --colors --coverage --watchAll=false --no-cache",
     "eject": "react-scripts eject",
     "lint": "npx eslint '*/**/*.{js,ts,tsx}' --fix --quiet",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -63,6 +65,7 @@
     "@typescript-eslint/eslint-plugin": "^5.1.0",
     "@typescript-eslint/parser": "^5.1.0",
     "autoprefixer": "^9",
+    "cypress": "^10.1.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-import-resolver-typescript": "^2.5.0",
     "eslint-plugin-import": "^2.25.2",
