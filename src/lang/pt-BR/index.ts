@@ -8,8 +8,12 @@ const CUSTOMERS = {
   title: 'Alguns Clientes',
 };
 
+const PRODUCTS = {
+  title: 'Seu Escritório Virtual',
+};
+
 const LANG = {
-  HERO, CUSTOMERS,
+  HERO, CUSTOMERS, PRODUCTS,
 };
 
 export default LANG;
