@@ -1,36 +1,26 @@
 import { ReactElement } from 'react';
 import LANG from '../../lang/pt-BR';
+import RegisterButton from '../shared/RegisterButton';
 import styles from './Hero.module.css';
 
-export function Hero(): ReactElement {
-  const appSite = process.env.REACT_APP_PROJECT_APP_URL;
-
+// TODO: CREATE CARROUCEL
+export default function Hero(): ReactElement {
   return (
-    <div className="gradient w-full h-screen">
+    <div className="gradient w-full pb-8">
       <div className="container mx-auto">
-        <div className="text-center px-3 lg:px-0">
-          <h1 className="my-4 text-2xl md:text-3xl lg:text-5xl font-black leading-tight">
+        <div className="text-center py-8">
+          <h1 className="text-2xl md:text-3xl lg:text-5xl font-extrabold">
             {LANG.HERO.title}
           </h1>
-          <p className="leading-normal text-gray-800 text-base md:text-xl lg:text-2xl mb-8">
+          <p className="mt-4 md:text-xl lg:text-2xl">
             {LANG.HERO.subtitle}
           </p>
-
-          <button
-            type="button"
-            className="gradient2 mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded my-2 md:my-6 py-4 px-8 shadow-lg w-48"
-            onClick={() => window.location.assign(`${appSite}/registar`)}
-          >
-            {LANG.HERO.button}
-          </button>
+          <RegisterButton className="my-6" />
         </div>
-
-        <div className="flex items-center w-full mx-auto content-end">
-          <div className={`${styles.browsermockup} flex flex-1 m-6 md:px-0 md:m-12 bg-white w-1/2 rounded shadow-xl`} />
+        <div className="flex items-center lg:mx-16">
+          <div className={`${styles.browsermockup} flex-1 mx-6 bg-white rounded-xl shadow-xl`} />
         </div>
       </div>
     </div>
   );
 }
-
-export default Hero;
