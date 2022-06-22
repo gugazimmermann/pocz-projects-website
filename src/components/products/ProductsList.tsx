@@ -3,7 +3,7 @@ import { ReactElement } from 'react';
 import ProductOne from './images/productOne';
 import ProductTwo from './images/productTwo';
 
-const productsList: { name: string, description: string, link: string, image: ReactElement }[] = [
+const ProductsList: { name: string, description: string, link: string, image: ReactElement }[] = [
   {
     name: 'Lorem ipsum dolor sit amet',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.',
@@ -18,4 +18,4 @@ const productsList: { name: string, description: string, link: string, image: Re
   },
 ];
 
-export default productsList;
+export default ProductsList;
