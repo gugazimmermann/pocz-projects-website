@@ -2,7 +2,7 @@ import { ReactElement } from 'react';
 import LANG from '../../lang/pt-BR';
 import Title from '../shared/Title';
 import PricingItem from './PricingItem';
-import PricingList from './pricingList';
+import PricingList from './PricingList';
 
 export default function Pricing(): ReactElement {
   return (
