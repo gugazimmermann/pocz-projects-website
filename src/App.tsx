@@ -8,7 +8,7 @@ const Layout = lazy(() => import('./pages/layout/Layout'));
 const AboutUs = lazy(() => import('./pages/about-us/AboutUs'));
 const Contact = lazy(() => import('./pages/contact/Contact'));
 const Faq = lazy(() => import('./pages/faq/Faq'));
-const Functionalities = lazy(() => import('./pages/functionalities/Functionalities'));
+const Features = lazy(() => import('./pages/features/Features'));
 const Help = lazy(() => import('./pages/help/Help'));
 const Main = lazy(() => import('./pages/main/Main'));
 const Plans = lazy(() => import('./pages/plans/Plans'));
@@ -31,10 +31,10 @@ function App(): ReactElement {
         />
         <Route
           exact
-          path={Routes.Functionalities}
+          path={Routes.Features}
           render={() => (
             <Layout>
-              <Functionalities />
+              <Features />
             </Layout>
           )}
         />

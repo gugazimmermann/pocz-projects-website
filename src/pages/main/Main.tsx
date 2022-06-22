@@ -3,16 +3,16 @@ import Action from '../../components/action/Action';
 import Customers from '../../components/customers/Customers';
 import Hero from '../../components/hero/Hero';
 import Pricing from '../../components/pricing/Pricing';
-import ProductDetails from '../../components/product-details/ProductDetails';
-import ProductMain from '../../components/product-main/ProductMain';
+import Modules from '../../components/modules/Modules';
+import Products from '../../components/products/Products';
 
 export function Main(): ReactElement {
   return (
     <>
       <Hero />
       <Customers />
-      <ProductMain />
-      <ProductDetails />
+      <Products />
+      <Modules />
       <Pricing />
       <Action />
     </>

@@ -7,7 +7,7 @@ describe('PricingItem', () => {
     const { baseElement } = render(
       <PricingItem
         title="AAA"
-        functionalities={['func 1', 'func 2', 'func 3']}
+        features={['func 1', 'func 2', 'func 3']}
         price={0}
         priceText="user"
         link="AAA"
@@ -20,7 +20,7 @@ describe('PricingItem', () => {
     const { getAllByText } = render(
       <PricingItem
         title="AAA"
-        functionalities={['func 1', 'func 2', 'func 3']}
+        features={['func 1', 'func 2', 'func 3']}
         price={0}
         priceText="user"
         link="AAA"

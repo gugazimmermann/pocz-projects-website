@@ -1,19 +1,23 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import {
-  fireEvent, screen, render, waitFor,
+  fireEvent, render, screen, waitFor,
 } from '@testing-library/react';
 
-import PricingItemButton from './PricingItemButton';
+import ModuleItem from './ModuleItem';
 
-describe('PricingItemButton', () => {
+describe('ProductDetailsItem', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<PricingItemButton link="AAA" active />);
+    const { baseElement } = render(
+      <ModuleItem title="AAA" subTitle="BBB" text="CCC" link="/" />,
+    );
     expect(baseElement).toBeTruthy();
   });
 
-  it('should have Cadastrar text', () => {
-    const { getAllByText } = render(<PricingItemButton link="AAA" active />);
-    expect(getAllByText('Cadastrar')).toBeTruthy();
+  it('should have CCC text', () => {
+    const { getAllByText } = render(
+      <ModuleItem title="AAA" subTitle="BBB" text="CCC" link="/" />,
+    );
+    expect(getAllByText('CCC')).toBeTruthy();
   });
 
   it('should call window.location on click', async () => {
@@ -27,10 +31,10 @@ describe('PricingItemButton', () => {
       reload: jest.fn(),
       replace: jest.fn(),
     });
-    render(<PricingItemButton link="AAA" active />);
-    const btn = screen.getByText('Cadastrar');
+    render(<ModuleItem title="AAA" subTitle="BBB" text="CCC" link="/DDD" />);
+    const btn = screen.getByText('Testar');
     await waitFor(() => fireEvent.click(btn));
-    await waitFor(() => expect(window.location.assign).toHaveBeenCalledWith('AAA'));
+    await waitFor(() => expect(window.location.assign).toHaveBeenCalledWith('/DDD'));
     window.location = originalLocation;
   });
 });

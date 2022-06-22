@@ -1,15 +1,15 @@
 import { render } from '@testing-library/react';
 
-import ProductDetails from './ProductDetails';
+import Modules from './Modules';
 
-describe('ProductDetails', () => {
+describe('Modules', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<ProductDetails />);
+    const { baseElement } = render(<Modules />);
     expect(baseElement).toBeTruthy();
   });
 
   it('should have Módulos text', () => {
-    const { getAllByText } = render(<ProductDetails />);
+    const { getAllByText } = render(<Modules />);
     expect(getAllByText('Módulos')).toBeTruthy();
   });
 });

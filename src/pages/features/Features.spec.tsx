@@ -1,14 +1,14 @@
 import { render } from '@testing-library/react';
 
-import Functionalities from './Functionalities';
+import Features from './Features';
 
-describe('Functionalities', () => {
+describe('Features', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Functionalities />);
+    const { baseElement } = render(<Features />);
     expect(baseElement).toBeTruthy();
   });
   it('should have Seu Escritório Virtual as the title', () => {
-    const { getAllByText } = render(<Functionalities />);
+    const { getAllByText } = render(<Features />);
     expect(getAllByText('Seu Escritório Virtual')).toBeTruthy();
   });
 });
