@@ -18,7 +18,7 @@ function renderCustomer(
 
 export default function Customers(): ReactElement {
   return (
-    <section className="w-full border-b bg-neutral-100">
+    <section className="w-full border-b">
       <div className="container mx-auto max-w-5xl">
         <Title title={LANG.CUSTOMERS.title} />
         <div className="mb-4 flex flex-wrap items-center justify-between">
