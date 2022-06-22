@@ -9,7 +9,7 @@ interface LayoutProps {
 
 export function Layout({ children }: LayoutProps): ReactElement {
   return (
-    <div className="leading-relaxed tracking-wide flex flex-col">
+    <div className="tracking-wide flex flex-col bg-neutral-50 text-grey-800">
       <Nav />
       {children}
       <Footer />
