@@ -14,7 +14,26 @@ describe("e2e Tests", () => {
 
   it("Visits WebSite", () => {
     cy.title().should("eq", env.REACT_APP_PROJECT_WEBSITE_NAME);
-    cy.get("span").contains(env.REACT_APP_PROJECT_NAME).should("exist");
+    cy.contains(`${LANG.LOADING}...`).should("exist");
+    cy.get("span")
+      .contains(env.REACT_APP_PROJECT_NAME)
+      .should("exist")
+      .closest("nav")
+      .should("not.have.class", "bg-primary-600")
+      .should("have.class", "sticky");
+    cy.scrollTo(0, 500);
+    cy.get("span")
+    .contains(env.REACT_APP_PROJECT_NAME)
+    .should("exist")
+    .closest("nav")
+    .should("have.class", "bg-primary-600");
+    cy.viewport('iphone-6');
+    cy.get("span")
+    .contains(env.REACT_APP_PROJECT_NAME)
+    .should("exist")
+    .closest("nav").within(() => {
+      cy.get("button").should("have.class", "gradient2").children("svg").should("exist");
+    })
   });
 
   it("Hero", () => {
