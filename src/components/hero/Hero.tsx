@@ -6,7 +6,7 @@ import styles from './Hero.module.css';
 // TODO: CREATE CARROUCEL
 export default function Hero(): ReactElement {
   return (
-    <div className="gradient w-full pb-8">
+    <section className="gradient w-full pb-8">
       <div className="container mx-auto">
         <div className="text-center py-8">
           <h1 className="text-2xl md:text-3xl lg:text-5xl font-extrabold">
@@ -21,6 +21,6 @@ export default function Hero(): ReactElement {
           <div className={`${styles.browsermockup} flex-1 mx-6 bg-white rounded-xl shadow-xl`} />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
