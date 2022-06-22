@@ -7,19 +7,16 @@ interface NavItemProps {
   active: boolean;
 }
 
-export function NavItem({ link, text, active }: NavItemProps): ReactElement {
+export default function NavItem({ link, text, active }: NavItemProps): ReactElement {
   return (
     <Link to={link}>
       <span
-        className={
-          `inline-block no-underline py-2 px-4 ${
-            active ? 'font-bold' : 'hover:text-underline'}`
-        }
+        className={`inline-block no-underline py-2 px-4 ${
+          active ? 'font-bold' : 'hover:text-underline'
+        }`}
       >
         {text}
       </span>
     </Link>
   );
 }
-
-export default NavItem;
