@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 import SVGProps from './props';
 
-export function TeeShirtz({ color }: SVGProps): ReactElement {
+export default function TeeShirtz({ color }: SVGProps): ReactElement {
   return (
     <svg
       className={`h-10 w-10 mr-4 fill-current ${color}`}
@@ -12,5 +12,3 @@ export function TeeShirtz({ color }: SVGProps): ReactElement {
     </svg>
   );
 }
-
-export default TeeShirtz;

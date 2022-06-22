@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 import SVGProps from './props';
 
-export function Bugz4Life({ color }: SVGProps): ReactElement {
+export default function Bugz4Life({ color }: SVGProps): ReactElement {
   return (
     <svg
       className={`h-10 w-10 mr-4 fill-current ${color}`}
@@ -12,5 +12,3 @@ export function Bugz4Life({ color }: SVGProps): ReactElement {
     </svg>
   );
 }
-
-export default Bugz4Life;
