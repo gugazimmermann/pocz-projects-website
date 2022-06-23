@@ -34,8 +34,6 @@ jobs:
           wait-on: 'http://localhost:4200'
           wait-on-timeout: 120
           browser: chrome
-          record: false
-          parallel: true
       - name: Build
         run: yarn build
       - name: Send to S3
