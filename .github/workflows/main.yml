@@ -25,6 +25,8 @@ jobs:
           cat .env
       - name: Install
         run: yarn install --immutable
+      - name: Unit Tests
+        run:  yarn test
       - name: E2E Tests - Chrome
         uses: cypress-io/github-action@v4
         with:
@@ -35,8 +37,6 @@ jobs:
           browser: chrome
           record: false
           parallel: true
-      - name: Unit Tests
-        run:  yarn test
       - name: Build
         run: yarn build
       - name: Send to S3
