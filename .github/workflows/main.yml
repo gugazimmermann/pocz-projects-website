@@ -30,6 +30,7 @@ jobs:
         uses: cypress-io/github-action@v4
         with:
           install: true
+          config: video=false,screenshotOnRunFailure=false,reporter='spec',REACT_APP_PROJECT_WEBSITE_URL=http://localhost:4200
           start: yarn start
           wait-on: 'http://localhost:4200'
           wait-on-timeout: 120
