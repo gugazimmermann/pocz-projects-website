@@ -29,9 +29,9 @@ jobs:
       - name: E2E Tests - Chrome
         uses: cypress-io/github-action@v4
         with:
-          install: false
-          start: yarn start:ci
-          wait-on: 'http://localhost:3000'
+          install: true
+          start: yarn start
+          wait-on: 'http://localhost:4200'
           wait-on-timeout: 120
           browser: chrome
           record: false
