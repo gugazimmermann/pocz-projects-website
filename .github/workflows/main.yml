@@ -1,8 +1,7 @@
-name: Development Build
+name: Deployment
 on:
   push:
-    branches:
-      - development
+    branches: [ master, development ]
 jobs:
   build:
     runs-on: ubuntu-latest
