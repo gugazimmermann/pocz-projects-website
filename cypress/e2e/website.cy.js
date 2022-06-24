@@ -9,6 +9,7 @@ describe("e2e Tests", () => {
   const env = Cypress.env();
 
   beforeEach(() => {
+    cy.task('log', env);
     cy.visit(env.REACT_APP_PROJECT_WEBSITE_URL);
   });
 
