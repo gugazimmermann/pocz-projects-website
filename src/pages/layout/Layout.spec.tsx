@@ -1,39 +1,40 @@
-import { render } from '@testing-library/react';
+import { fireEvent, render, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router';
 import Layout from './Layout';
 import Main from '../main/Main';
 
 describe('Layout', () => {
-  it('should render successfully', () => {
-    const { baseElement } = render(
+  it('should have Nav Menu', () => {
+    const { findByRole } = render(
       <MemoryRouter>
         <Layout>
           <Main />
         </Layout>
       </MemoryRouter>,
     );
-    expect(baseElement).toBeTruthy();
+    expect(findByRole('nav')).toBeTruthy();
   });
 
-  it('should have Menu text', () => {
-    const { getAllByText } = render(
+  it('should scroll and change menu color', async () => {
+    const { findByRole } = render(
       <MemoryRouter>
         <Layout>
           <Main />
         </Layout>
       </MemoryRouter>,
     );
-    expect(getAllByText('Menu')).toBeTruthy();
+    await waitFor(() => fireEvent.scroll(window, { target: { scrollY: 500 } }));
+    expect(findByRole('nav')).toBeTruthy();
   });
 
-  it('should have Links text', () => {
-    const { getAllByText } = render(
+  it('should have Footer', () => {
+    const { findByRole } = render(
       <MemoryRouter>
         <Layout>
           <Main />
         </Layout>
       </MemoryRouter>,
     );
-    expect(getAllByText('Links')).toBeTruthy();
+    expect(findByRole('footer')).toBeTruthy();
   });
 });
