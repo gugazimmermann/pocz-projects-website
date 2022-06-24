@@ -16,7 +16,6 @@ jobs:
           node-version: 14
       - name: Create .env File
         run: |
-          echo "${{ github.ref }}"
           touch .env
           echo REACT_APP_PROJECT_NAME=${{ secrets.REACT_APP_PROJECT_NAME }} >> .env
           echo REACT_APP_PROJECT_WEBSITE_NAME=${{ secrets.REACT_APP_PROJECT_WEBSITE_NAME }} >> .env

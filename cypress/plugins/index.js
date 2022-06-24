@@ -1,12 +1,6 @@
 require("dotenv").config();
 
 module.exports = (on, config) => {
-  on('task', {
-    log (message) {
-      console.log(message)
-      return null
-    }
-  });
   const {
     REACT_APP_PROJECT_NAME,
     REACT_APP_PROJECT_WEBSITE_NAME,
