@@ -14,7 +14,6 @@ describe("e2e Tests", () => {
 
   it("Visits WebSite", () => {
     cy.title().should("eq", env.REACT_APP_PROJECT_WEBSITE_NAME);
-    cy.contains(`${LANG.LOADING}...`).should("exist");
     cy.get("span")
       .contains(env.REACT_APP_PROJECT_NAME)
       .should("exist")
