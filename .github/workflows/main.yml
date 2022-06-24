@@ -27,9 +27,12 @@ jobs:
         run: yarn test
       - name: E2E Tests - Chrome
         uses: cypress-io/github-action@v4
+        env:
+          CYPRESS_REACT_APP_PROJECT_WEBSITE_URL: http://localhost:4200
+          CYPRESS_REACT_APP_PROJECT_WEBSITE_NAME: ${{ secrets.REACT_APP_PROJECT_WEBSITE_NAME }}
+          CYPRESS_REACT_APP_PROJECT_NAME: ${{ secrets.REACT_APP_PROJECT_NAME }}
         with:
           config: video=false,screenshotOnRunFailure=false
-          env: REACT_APP_PROJECT_WEBSITE_URL=http://localhost:4200,REACT_APP_PROJECT_WEBSITE_NAME=${{ secrets.REACT_APP_PROJECT_WEBSITE_NAME }},REACT_APP_PROJECT_NAME=${{ secrets.REACT_APP_PROJECT_NAME }}
           start: yarn start
           wait-on: "http://localhost:4200"
           wait-on-timeout: 120
