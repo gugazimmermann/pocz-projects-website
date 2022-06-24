@@ -13,5 +13,6 @@ module.exports = (on, config) => {
     REACT_APP_PROJECT_WEBSITE_URL,
     REACT_APP_PROJECT_APP_URL
   };
+  console.log(config.env);
   return config;
 };

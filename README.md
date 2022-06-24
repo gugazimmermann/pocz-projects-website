@@ -35,4 +35,3 @@ Created using React / TypeScript / Tailwind / Sequelize / PostgreSQL / Github Ac
 Using GitHub Actions to run tests, build and send to AWS in the correct environment.
 
 ![CICD](./readme-imgs/cicd.png)
-

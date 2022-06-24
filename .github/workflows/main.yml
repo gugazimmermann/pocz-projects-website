@@ -28,7 +28,6 @@ jobs:
       - name: E2E Tests - Chrome
         uses: cypress-io/github-action@v4
         with:
-          install: true
           config: video=false,screenshotOnRunFailure=false
           env: REACT_APP_PROJECT_WEBSITE_URL=http://localhost:4200,REACT_APP_PROJECT_WEBSITE_NAME=${{ secrets.REACT_APP_PROJECT_WEBSITE_NAME }},REACT_APP_PROJECT_NAME=${{ secrets.REACT_APP_PROJECT_NAME }}
           start: yarn start
